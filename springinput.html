@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Content with Bootstrap</title>
+
+    <!-- Add Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        /* Reset some default styles */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+        }
+
+        /* Header styles */
+        h1 {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #3498db;
+            color: #fff;
+            margin: 0;
+        }
+
+        /* Container styles */
+        #container {
+            display: flex;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 90%;
+            margin: 20px auto;
+        }
+
+        /* Video container styles */
+        #video-container {
+            flex: 1;
+            padding: 20px;
+        }
+
+        /* Video player styles */
+        video {
+            max-width: 100%;
+            display: block;
+        }
+
+        /* Dropdown navigation styles */
+        nav {
+            text-align: center;
+        }
+
+        select {
+            padding: 10px;
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        select option {
+            background-color: #3498db;
+            color: #fff;
+        }
+
+        /* Content div styles */
+        #content {
+            padding: 20px;
+        }
+
+        /* Day button styles */
+        .day-button {
+            padding: 10px 20px; /* Adjust padding as needed */
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            margin-bottom: 10px; /* Adjust as needed for spacing between buttons */
+            margin-right: 10px; /* Add margin to the right for spacing between buttons */
+            font-size: 16px; /* Adjust font size as needed */
+            width: auto; /* Allow button width to adjust based on content */
+            height: auto; /* Allow button height to adjust based on content */
+            border-radius: 5px; /* Add rounded corners */
+            transition: background-color 0.3s ease; /* Add a smooth background color transition */
+        }
+
+        /* Style for the Show/Hide All Content button */
+        #toggle-content {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        /* Hover effect for day buttons */
+        .day-button:hover {
+            background-color: #2186c4; /* Change background color on hover */
+        }
+
+        /* Hover effect for Show/Hide All Content button */
+        #toggle-content:hover {
+            background-color: #0056b3; /* Change background color on hover */
+        }
+
+
+        /* back button */
+        .backButton {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      font-size: 18px;
+      padding: 5px 10px;
+      border: none;
+      font-weight: bold;
+      background-color: #e7e4e0;
+      color: rgb(13, 11, 11);
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .backButton:hover {
+      background-color: #ffa007; /* Change the background color on hover */
+      box-shadow: 0 12px 16px 0 whitesmoke, 0 17px 50px 0 whitesmoke; /* Change the box-shadow on hover */
+    }
+    </style>
+</head>
+<body>
+    <h1>HTML Content</h1>
+    <button class="backButton" onclick="goBack()">Back</button>
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-8">
+                <nav>
+                    <select id="nav-dropdown" class="form-control">
+                    </select>
+                </nav>
+                <div id="content-dropdown">
+                    <!-- Content for the selected day will be displayed here -->
+                </div>
+                <div id="video-container">
+                    <!-- Video player for the selected day will be displayed here -->
+                </div>
+            </div>
+            <div class="col-md-4">
+                <button id="all-days-button" class="btn btn-primary btn-sm">All Days</button>
+                <br><br>
+                <div id="all-days-content">
+                    <!-- Content for all days will be displayed here -->
+                </div>
+                <div id="day-buttons">
+                    <!-- Buttons will be dynamically generated here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Bootstrap JS and jQuery (required for Bootstrap) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        // backbutton
+        function goBack() {
+    window.location.href = "index.html";
+  }
+        // Get DOM elements
+        const dayButtons = document.getElementById('day-buttons');
+        const navDropdown = document.getElementById('nav-dropdown');
+        const contentDropdown = document.getElementById('content-dropdown');
+        const allDaysButton = document.getElementById('all-days-button');
+        const allDaysContent = document.getElementById('all-days-content');
+        const videoContainer = document.getElementById('video-container');
+
+        // Define the video sources in an array
+        const videoSources = [
+          
+            // Add video sources for other days as needed
+        ];
+
+        // Additional content for each day
+        const dayContent = [
+      
+        
+        ];
+
+        // Function to display content for a specific day
+        function displayDayContent(day) {
+            // Clear the previous video and content
+            contentDropdown.innerHTML = '';
+
+            // Display the content within the dropdown
+            contentDropdown.textContent = dayContent[day];
+
+            // Create a video element and set its attributes
+            const videoElement = document.createElement('video');
+            videoElement.controls = true;
+            const sourceElement = document.createElement('source');
+            sourceElement.src = videoSources[day];
+            sourceElement.type = 'video/mp4';
+
+            // Append the source element to the video element
+            videoElement.appendChild(sourceElement);
+
+            // Clear previous video and append the new video to the video container
+            videoContainer.innerHTML = '';
+            videoContainer.appendChild(videoElement);
+
+            // Update the selected option in the navigation dropdown
+            navDropdown.selectedIndex = day;
+        }
+
+        // Function to display content for all days
+        function displayAllDaysContent() {
+            // Clear the previous video and content
+            contentDropdown.innerHTML = '';
+
+            // Display content for all days as a sequence
+            const allContent = dayContent.join('\n\n');
+            contentDropdown.textContent = allContent;
+
+            // Update the selected option in the navigation dropdown
+            navDropdown.selectedIndex = -1; // No specific day selected
+        }
+
+        // Dynamically generate buttons and navigation dropdown options based on the number of video sources
+        for (let i = 0; i < videoSources.length; i++) {
+            const button = document.createElement('button');
+            button.textContent = `Day ${i + 1}`;
+            button.classList.add('btn', 'btn-primary', 'day-button', 'btn-sm');
+            button.id = `day${i + 1}`;
+            button.addEventListener('click', () => displayDayContent(i));
+            dayButtons.appendChild(button);
+
+            // Create an option for the navigation dropdown
+            const option = document.createElement('option');
+            option.textContent = `Day ${i + 1}`;
+            navDropdown.appendChild(option);
+        }
+
+        // Handle navigation dropdown selection change
+        navDropdown.addEventListener('change', () => {
+            const selectedDay = navDropdown.selectedIndex;
+            if (selectedDay === -1) {
+                // If "All Days" is selected
+                displayAllDaysContent();
+            } else {
+                displayDayContent(selectedDay);
+            }
+        });
+
+        // Handle "All Days" button click to toggle content visibility
+        let allDaysVisible = false;
+        allDaysButton.addEventListener('click', () => {
+            if (!allDaysVisible) {
+                // Display content for all days
+                displayAllDaysContent();
+                allDaysContent.style.display = 'block';
+            } else {
+                // Hide the content
+                allDaysContent.style.display = 'none';
+            }
+            // Toggle visibility status
+            allDaysVisible = !allDaysVisible;
+        });
+
+        // Initially display content for Day 1
+        displayDayContent(0);
+    </script>
+</body>
+</html>
