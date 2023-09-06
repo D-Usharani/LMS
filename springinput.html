@@ -257,18 +257,23 @@
 
         // Handle "All Days" button click to toggle content visibility
         let allDaysVisible = false;
-        allDaysButton.addEventListener('click', () => {
-            if (!allDaysVisible) {
-                // Display content for all days
-                displayAllDaysContent();
-                allDaysContent.style.display = 'block';
-            } else {
-                // Hide the content
-                allDaysContent.style.display = 'none';
-            }
-            // Toggle visibility status
-            allDaysVisible = !allDaysVisible;
-        });
+allDaysButton.addEventListener('click', () => {
+    if (!allDaysVisible) {
+        // Display content for all days
+        displayAllDaysContent();
+        allDaysContent.style.display = 'block';
+        navDropdown.selectedIndex = -1; // Deselect any specific day
+    } else {
+        // Hide the content
+        allDaysContent.style.display = 'none';
+        // Display content for the currently selected day
+        const selectedDay = navDropdown.selectedIndex;
+        displayDayContent(selectedDay);
+    }
+    // Toggle visibility status
+    allDaysVisible = !allDaysVisible;
+});
+
 
         // Initially display content for Day 1
         displayDayContent(0);
