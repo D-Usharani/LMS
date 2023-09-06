@@ -167,8 +167,8 @@ section .title::after{
 /* home section styling */
 .home{
     display: flex;
-    background: url("WhatsApp Image 2023-02-12 at 19.34.57.jpg") no-repeat center;
-    height: 100vh;
+    /* background: url("WhatsApp Image 2023-02-12 at 19.34.57.jpg") no-repeat center;
+    height: 100vh; */
     color: #150101;
     min-height: 500px;
     background-size: cover;
@@ -264,7 +264,7 @@ section .title::after{
 }
 
 /* education section styling */
-.services, .projects{
+/* /* .services, .projects{
     color:#fff;
     background: #111;
 }
@@ -307,9 +307,9 @@ section .title::after{
     font-size: 25px;
     font-weight: 500;
     margin: 10px 0 7px 0;
-}
+} 
 
-/* skills section styling */
+/* skills section styling 
 
 .skills .title::after{
     content: "what i know";
@@ -383,7 +383,7 @@ section .title::after{
 .skills-content .right .mysql::before{
     width: 70%;
 }
-/* project section styling*/
+project section styling
 .projects .title::after{
     content: "what I did";
 }
@@ -393,7 +393,7 @@ section .title::after{
     margin-bottom: 10px;
 }
 
-/* teams section styling */
+ teams section styling 
 .projects .title::after{
     content: "who with me";
 }
@@ -432,8 +432,8 @@ section .title::after{
     transition: all 0.3s ease;
     
 }
-/* .projects .carousel .card:hover img{
-    border-color: #fff; */
+ .projects .carousel .card:hover img{
+    border-color: #fff; 
 
 .owl-dots{
     text-align: center;
@@ -455,7 +455,7 @@ section .title::after{
 .owl-dot.active,
 .owl-dot:hover{
     background: crimson!important;
-}
+} */
 
 /* contact section styling */
 .contact .title::after{
@@ -965,7 +965,7 @@ footer span a:hover{
 
 /* projects css */
 /* CSS for the projects section */
-.projects {
+/* .projects {
     background-color: #f9f9f9;
     padding: 80px 0;
     text-align: center;
@@ -1006,7 +1006,7 @@ footer span a:hover{
     font-size: 14px;
     margin-top: 10px;
     color: #777;
-}
+} */
 
 /* Adjust these styles as needed to match your design preferences */
 
