@@ -18,7 +18,7 @@
             display: block;
             position: fixed;
             top: 20px;
-            right: 130px;
+            right: 100px;
             cursor: pointer;
             z-index: 1000;
         }
@@ -61,6 +61,22 @@
             text-decoration: none;
             font-size: 24px;
         }
+        
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+    .menu-icon {
+        top: 20px;
+        right: 110px;
+    }
+
+    .menu-icon i {
+        font-size: 18px;
+    }
+
+    .hidden-menu a {
+        font-size: 18px;
+    }
+}
     </style>
 </head>
 <body>
@@ -216,13 +232,6 @@
         <!-- Add more grid items for additional images -->
     </div>
     
-
-
- 
-
-
-
-
     <!-- contact section start -->
     <section class="contact" id="contact">
         <div class="max-width">
@@ -269,10 +278,11 @@ We look forward to assisting you and being a part of your learning journey at US
                 <div class="column right">
                   
                 
-                <center><div class="button-area">
+               <div class="button-area">
                     <!-- <button type="submit">Send Message</button> -->
-                    <img src="contact.gif" alt="" width="450px" height="350px">
-                </div> </center>
+                    <center>
+                    <img src="contact.gif" alt="" width="420px" height="350px" style="left: 20px;"></center>
+                </div> 
             </div>
         </div>
     </section>
