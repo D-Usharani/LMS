@@ -1,333 +1,640 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>USA LMS</title>
+
     <link rel="icon" type="image/png" href="icon.jpeg" sizes="128x128">
+
+
+
     <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Additional CSS for the hamburger menu -->
+
     <style>
         /* Hamburger menu icon styling */
+
         .menu-icon {
+
             display: block;
+
             position: fixed;
+
             top: 20px;
-            right: 100px;
+
+            right: 20px;
+
             cursor: pointer;
+
             z-index: 1000;
+
         }
+
+
 
         .menu-icon i {
+
             font-size: 24px;
-            color: #333; /* Adjust color as needed */
+
+            color: #333;
+            /* Adjust color as needed */
+
         }
+
+
 
         /* Hidden menu styling */
+
         .hidden-menu {
+
             display: none;
+
             position: fixed;
-            
+
+
+
             top: 0;
+
             left: 0;
+
             width: 100%;
+
             height: 100%;
-            background-color: rgba(0, 0, 0, 0.9); /* Adjust background color and opacity as needed */
+
+            background-color: rgba(0, 0, 0, 0.9);
+            /* Adjust background color and opacity as needed */
+
             z-index: 999;
+
             text-align: center;
+
         }
+
+
 
         .hidden-menu ul {
+
             list-style: none;
+
             padding: 0;
+
             margin: 0;
+
             position: absolute;
+
             top: 50%;
+
             left: 50%;
+
             transform: translate(-50%, -50%);
+
         }
+
+
 
         .hidden-menu li {
+
             margin-bottom: 20px;
+
         }
+
+
 
         .hidden-menu a {
-            color: #fff; /* Adjust text color as needed */
+
+            color: #fff;
+            /* Adjust text color as needed */
+
             text-decoration: none;
+
             font-size: 24px;
+
         }
-        
-/* Media query for smaller screens */
-@media screen and (max-width: 768px) {
-    .menu-icon {
-        top: 20px;
-        right: 110px;
-    }
-
-    .menu-icon i {
-        font-size: 18px;
-    }
-
-    .hidden-menu a {
-        font-size: 18px;
-    }
-}
     </style>
+
 </head>
+
 <body>
-   
+
+
+
     <!-- Hamburger menu icon -->
+
     <div class="menu-icon">
+
         <i class="fas fa-bars"></i>
+
     </div>
+
+
 
     <!-- Hidden menu -->
+
     <div class="hidden-menu">
+
         <ul>
+
             <li><a href="#home" class="menu-btn">Home</a></li>
+
             <li><a href="#about" class="menu-btn">About</a></li>
+
             <li><a href="#courses" class="menu-btn">Courses</a></li>
+
             <!-- <li><a href="#skills" class="menu-btn">Skills</a></li> -->
-   
+
+
+
             <li><a href="#contact" class="menu-btn">Contact</a></li>
+
             <!-- <li><a href="login.html" class="menu-btn">login</a></li> -->
+
         </ul>
+
     </div>
-  
+
+
+
     <nav class="navbar">
+
         <div class="max-width">
+
             <div class="logo"><a href="#">USA<span>EduInsight</span></a></div>
+
             <ul class="menu">
+
                 <li><a href="#home" class="menu-btn">Home</a></li>
+
                 <li><a href="#about" class="menu-btn">About</a></li>
+
                 <li><a href="#courses" class="menu-btn">Courses</a></li>
+
                 <!-- <li><a href="#skills" class="menu-btn">Skills</a></li> -->
-            
+
+
+
                 <li><a href="#contact" class="menu-btn">Contact</a></li>
+
                 <!-- <li><a href="login.html" class="menu-btn">login</a></li> -->
+
             </ul>
-      
+
+
+
         </div>
+
     </nav>
 
+
+
     <!-- home section start -->
+
     <section class="home" id="home">
+
         <div class="max-width">
+
             <div class="home-content">
+
                 <div style="display: flex;   align-items: center;">
-                    <div><h1 style="font-weight: 30px;">Hey, There</h1></div>
-                <div class="text-1"> <img src="waving-wave.gif" alt="" style="height: 150px; width: 150px;"></div>
-               </div>
-                <br>
-                <div class="text-2">Welcome to USA EduInsight Your Gateway to Limitless Learning <br> <br>
-                  <p style="font-size: 25px;"> Transforming Knowledge into Visual Brilliance Designing the Future of USA EduInsight.</p></div>
-                <!-- <h1 style="height: 70px;">Welcome to USA EduInsight Your Gateway to Limitless Learning <br> Transforming Knowledge into Visual Brilliance Designing the Future of USA EduInsight.</h1> -->
-                <br><br>
-            
-            </div>
-        </div>
-    </section>
-  
-    <!-- about section start -->
-    <section class="about" id="about">
-        <div class="max-width">
-            <br><br><br>
-            <h2 class="title">About US</h2>
-            <div class="about-content">
-                <div class="column left" >
-                    <img src="icon.jpeg" alt="">
+
+                    <div>
+                        <h1 style="font-weight: 30px;">Hey, There</h1>
+                    </div>
+
+                    <div class="text-1"> <img src="waving-wave.gif" alt="" style="height: 150px; width: 150px;"></div>
+
                 </div>
+
+                <br>
+
+                <div class="text-2">Welcome to USA EduInsight Your Gateway to Limitless Learning <br> <br>
+
+                    <p style="font-size: 25px;"> Transforming Knowledge into Visual Brilliance Designing the Future of
+                        USA EduInsight.</p>
+                </div>
+
+                <!-- <h1 style="height: 70px;">Welcome to USA EduInsight Your Gateway to Limitless Learning <br> Transforming Knowledge into Visual Brilliance Designing the Future of USA EduInsight.</h1> -->
+
                 <br><br>
+
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- about section start -->
+
+    <section class="about" id="about">
+
+        <div class="max-width">
+
+            <br><br><br>
+
+            <h2 class="title">About US</h2>
+
+            <div class="about-content">
+
+                <div class="column left">
+
+                    <img src="icon.jpeg" alt="">
+
+                </div>
+
                 <br><br>
+
+                <br><br>
+
                 <div class="column right">
+
                     <div class="text"><span class="typing-2"></span></div>
-                    <h2>Welcome to USA EduInsight: Your Gateway to Limitless Learning </h2> 
+
+                    <h2>Welcome to USA EduInsight: Your Gateway to Limitless Learning </h2>
+
+                    <br>
+
+                    <p>
+
+                        At USA EduInsight, we believe that education knows no boundaries, and learning should be an
+                        exciting journey filled with endless possibilities. We're thrilled to have you join our vibrant
+                        community of learners, where knowledge, innovation, and growth come together.
+
+                    </p>
+
+                    <br><br>
+
+                    <h3> Why Choose USA EduInsight?</h3>
+
+                    <br><br>
+
+
+
+                    🌟 <strong>Unparalleled Learning Resources: </strong> Explore a vast library of courses, resources,
+                    and expert-led content, all meticulously curated to empower your educational journey.
+
+                    <br><br>
+
+                    🔗 <strong>Interactive Learning: </strong> Engage with dynamic, interactive lessons designed to make
+                    learning enjoyable and effective. From quizzes to simulations, we make every moment count.
+
+                    <br><br>
+
+                    🧠 <strong>Personalized Learning: </strong> Tailor your learning path to suit your goals and pace.
+                    Our adaptive platform ensures you get the most out of every study session.
+
+                    <br><br>
+
+                    🌎<strong> Global Community: </strong> Connect with learners from around the world, fostering
+                    diverse perspectives, and enriching your educational experience.
+
+                    <br><br>
+
+                    🎓 <strong>Expert Instructors: </strong> Learn from industry professionals and subject matter
+                    experts who are passionate about sharing their knowledge and helping you succeed.
+
+                    <br><br>
+
+                    📈<strong> Track Your Progress: </strong> Monitor your growth and celebrate your achievements with
+                    our comprehensive progress tracking tools.
+
+                    <br><br>
+
+                    <h2>Join Our Journey</h2>
+
                     <br>
                     <p>
-                        At USA EduInsight, we believe that education knows no boundaries, and learning should be an exciting journey filled with endless possibilities. We're thrilled to have you join our vibrant community of learners, where knowledge, innovation, and growth come together.
+
+                        Whether you're a student, professional, or lifelong learner, USA EduInsight is your partner on
+                        the road to success. We're committed to fostering a culture of curiosity, excellence, and
+                        collaboration. Together, we'll unlock your potential and make learning an inspiring adventure.
+
                     </p>
-                    <br><br>
-                       <h3> Why Choose USA EduInsight?</h3>
-                        <br><br>
-                        
-                        🌟 <strong>Unparalleled Learning Resources: </strong>  Explore a vast library of courses, resources, and expert-led content, all meticulously curated to empower your educational journey.
-                        <br><br>
-                        🔗 <strong>Interactive Learning: </strong>  Engage with dynamic, interactive lessons designed to make learning enjoyable and effective. From quizzes to simulations, we make every moment count.
-                        <br><br>
-                        🧠 <strong>Personalized Learning: </strong>  Tailor your learning path to suit your goals and pace. Our adaptive platform ensures you get the most out of every study session.
-                        <br><br>
-                        🌎<strong> Global Community: </strong>  Connect with learners from around the world, fostering diverse perspectives, and enriching your educational experience.
-                        <br><br>
-                        🎓 <strong>Expert Instructors: </strong>  Learn from industry professionals and subject matter experts who are passionate about sharing their knowledge and helping you succeed.
-                        <br><br>
-                        📈<strong> Track Your Progress: </strong>  Monitor your growth and celebrate your achievements with our comprehensive progress tracking tools.
-                        <br><br>
-                    <h2>Join Our Journey</h2>
-                       <br> <p>
-                        Whether you're a student, professional, or lifelong learner, USA EduInsight is your partner on the road to success. We're committed to fostering a culture of curiosity, excellence, and collaboration. Together, we'll unlock your potential and make learning an inspiring adventure.
+
+                    <h2> Ready to Get Started?</h2> <br>
+
+                    <p>
+
+                        Dive into the world of limitless learning with USA EduInsight today! Sign up now to embark on
+                        your educational journey and unlock a brighter future.
+
                     </p>
-                    <h2>  Ready to Get Started?</h2>  <br>
-                        <p>
-                        Dive into the world of limitless learning with USA EduInsight today! Sign up now to embark on your educational journey and unlock a brighter future.
-                    </p>
-                        <h3>🚀 Sign Up Now </h3>
-                        <br>
-                       <p> Thank you for choosing USA EduInsight. We can't wait to see you thrive!</p>
+
+                    <h3>🚀 Sign Up Now </h3>
+
+                    <br>
+
+                    <p> Thank you for choosing USA EduInsight. We can't wait to see you thrive!</p>
+
                     <!-- <p>Junior Full Stack Java Developer , First and foremost I love writing coding and taking up the challenges. Ability to create innovative, creative, & interactive web designs to boost customer engagement. Sound good knowledge in HTML5, JavaScript , CSS, Bootstrap and Java. Build reusable code for future use while optimizing web performance.</p> -->
+
                 </div>
+
             </div>
+
         </div>
+
     </section>
 
 
-   <center> <h2 class="title" id="courses" style=" font-family: 'Poppins', sans-serif;  font-size: 50px;
-    font-weight: 500;">Courses</h2></center>
-   <br>
-    <div class="grid-container" >
-                <div class="grid-item">
+
+
+
+
+
+    <div class="grid-container" id="courses">
+
+        <div class="grid-item">
+
             <img class="image" src="html5.png" alt="HTML5">
+
             <div class="description">HTML5</div>
-         <div class="add-to-cart"><a href="htmlinput.html">Start</a></div>
+
+            <div class="add-to-cart"><a href="htmlinput.html">Start</a></div>
+
         </div>
+
         <div class="grid-item">
+
             <img class="image" src="CSS3 Vector Logo.jpg" alt="CSS3">
+
             <div class="description">CSS3</div>
+
             <div class="add-to-cart"><a href="cssinput.html">Start</a></div>
+
         </div>
+
         <div class="grid-item">
+
             <img class="image" src="js.png" alt="JavaScript">
+
             <div class="description">JavaScript</div>
+
             <div class="add-to-cart"><a href="jsinput.html">Start</a></div>
+
         </div>
+
         <div class="grid-item">
+
             <img class="image" src="java.png" alt="Java">
+
             <div class="description">Java</div>
+
             <div class="add-to-cart"><a href="javainput.html">Start</a></div>
+
         </div>
+
         <div class="grid-item">
+
             <img class="image" src="spring.png" alt="Spring Framework">
+
             <div class="description">Spring Framework</div>
+
             <div class="add-to-cart"><a href="springinput.html">Start</a></div>
+
         </div>
+
         <div class="grid-item">
+
             <img class="image" src="mysql.jpeg" alt="MySQL">
+
             <div class="description">MySQL</div>
+
             <div class="add-to-cart"><a href="mysqlinput.html">Start</a></div>
+
         </div>
+
         <div class="grid-item">
+
             <img class="image" src="postman.png" alt="Postman">
+
             <div class="description">Postman</div>
+
             <div class="add-to-cart"><a href="postman_input.html">Start</a></div>
+
         </div>
+
         <div class="grid-item">
+
             <img class="image" src="gitbub.png" alt="GitHub">
+
             <div class="description">GitHub</div>
+
             <div class="add-to-cart"><a href="git_input.html">Start</a></div>
+
         </div>
+
         <!-- Add more grid items for additional images -->
+
     </div>
-    
+
+
+
     <!-- contact section start -->
+
     <section class="contact" id="contact">
+
         <div class="max-width">
+
             <h2 class="title">Contact Us</h2>
+
             <div class="contact-content">
+
                 <div class="column left">
+
                     <div class="text">Get in Touch</div>
-                       <p>Contact Us at USA EduInsight
-Thank you for your interest in USA EduInsight, your gateway to a world of knowledge and learning opportunities. We are here to assist you with any inquiries, feedback, or assistance you may need. Feel free to reach out to us through the following contact methods:
-Our dedicated team is committed to providing you with the best learning experience. Whether you have questions about our HTML, CSS, JavaScript, Java, Spring Boot, MySQL, Postman, GitHub courses, or if you need assistance with your projects, we're here to help.
 
- 
+                    <p>Contact Us at USA EduInsight
 
-We also welcome your valuable feedback, suggestions, and ideas to improve our portal and course offerings. Your input is essential in helping us provide the highest quality education to our students.
+                        Thank you for your interest in USA EduInsight, your gateway to a world of knowledge and learning
+                        opportunities. We are here to assist you with any inquiries, feedback, or assistance you may
+                        need. Feel free to reach out to us through the following contact methods:
 
- 
+                        Our dedicated team is committed to providing you with the best learning experience. Whether you
+                        have questions about our HTML, CSS, JavaScript, Java, Spring Boot, MySQL, Postman, GitHub
+                        courses, or if you need assistance with your projects, we're here to help.
 
-If you're interested in our projects or have specific project-related queries, please don't hesitate to get in touch. We're excited to hear about your learning journey and how we can support you in achieving your educational goals.
-We look forward to assisting you and being a part of your learning journey at USA EduInsight. Thank you for choosing us as your partner in education!</p>
+
+
+
+
+
+
+                        We also welcome your valuable feedback, suggestions, and ideas to improve our portal and course
+                        offerings. Your input is essential in helping us provide the highest quality education to our
+                        students.
+
+
+
+
+
+
+
+                        If you're interested in our projects or have specific project-related queries, please don't
+                        hesitate to get in touch. We're excited to hear about your learning journey and how we can
+                        support you in achieving your educational goals.
+
+                        We look forward to assisting you and being a part of your learning journey at USA EduInsight.
+                        Thank you for choosing us as your partner in education!</p>
+
                     <div class="icons">
+
                         <div class="row">
+
                             <i class="fas fa-user"></i>
+
                             <div class="info">
+
                                 <div class="head">Name</div>
+
                                 <div class="sub-title">USA EduInsight</div>
+
                             </div>
+
                         </div>
+
                         <div class="row">
+
                             <i class="fas fa-map-marker-alt"></i>
+
                             <div class="info">
+
                                 <div class="head">Address</div>
+
                                 <div class="sub-title">Khammam, Telangana, India</div>
+
                             </div>
+
                         </div>
+
                         <div class="row">
+
                             <i class="fas fa-envelope"></i>
+
                             <div class="info">
+
                                 <div class="head">Email</div>
+
                                 <div class="sub-title">usaeduinsight@gmail.com</div>
+
                             </div>
+
                         </div>
+
                     </div>
+
                 </div>
+
                 <div class="column right">
-                  
-                
-               <div class="button-area">
-                    <!-- <button type="submit">Send Message</button> -->
+
+
+
+
+
                     <center>
-                    <img src="contact.gif" alt="" width="420px" height="350px" style="left: 20px;"></center>
-                </div> 
+                        <div class="button-area">
+
+                            <!-- <button type="submit">Send Message</button> -->
+
+                            <img src="contact.gif" alt="" width="350px" height="350px">
+
+                        </div>
+                    </center>
+
+                </div>
+
             </div>
-        </div>
+
     </section>
+
+
 
     <!-- footer section start -->
+
     <footer>
+
         <section>
+
             <div class="icons">
+
                 <a href="#" class="fab fa-facebook-f"></a>
                 <a href="https://mail.google.com/mail/u/1/#inbox" class="fas fa-envelope"></a>
                 <a href="https://www.instagram.com/usa_eduinsight/?utm_source=qr&igshid=MThlNWY1MzQwNA%3D%3D" class="fab fa-instagram"></a>
 
                 <a href="https://github.com/USA-EduInsight" class="fab fa-github"></a>
             </div>
+
         </section>
+
         <span>Created By <a href="#">USA EduInsight</a> | <span class="far fa-copyright"></span> 2023 All rights reserved.</span>
     </footer>
+    </footer>
+
+
 
     <!-- JavaScript/jQuery to toggle the menu -->
-    <script>
-      $(document).ready(function() {
-    // Function to close the hidden menu
-    function closeHiddenMenu() {
-        $(".hidden-menu").hide();
-    }
+<!-- JavaScript/jQuery to toggle the menu -->
+<script>
+    $(document).ready(function() {
+  // Function to close the hidden menu
+  function closeHiddenMenu() {
+      $(".hidden-menu").hide();
+  }
 
-    // Click event for the hamburger menu icon
-    $(".menu-icon").click(function() {
-        $(".hidden-menu").toggle();
-    });
+  // Click event for the hamburger menu icon
+  $(".menu-icon").click(function() {
+      $(".hidden-menu").toggle();
+  });
 
-    // Click event for menu items
-    $(".menu-btn").click(function() {
-        closeHiddenMenu();
+  // Click event for menu items
+  $(".menu-btn").click(function() {
+      closeHiddenMenu();
 
-        // Scroll to the target section (adjust the animation speed if needed)
-        $('html, body').animate({
-            scrollTop: $($(this).attr('href')).offset().top
-        }, 800);
+      // Scroll to the target section (adjust the animation speed if needed)
+      $('html, body').animate({
+          scrollTop: $($(this).attr('href')).offset().top
+      }, 800);
 
-        return false; // Prevent the default anchor link behavior
-    });
+      return false; // Prevent the default anchor link behavior
+  });
 });
 
-    </script>
-        <script src="script.js"></script>
+  </script>
+
+    <script src="script.js"></script>
+
 </body>
+
 </html>
