@@ -776,7 +776,7 @@ transition: transform 0.3s, box-shadow 0.3s;
 }
 
 /* project section styling*/
-
+/* 
 .projects .title::after{
 
     content: "what I did";
@@ -795,7 +795,7 @@ transition: transform 0.3s, box-shadow 0.3s;
 
  
 
-/* teams section styling */
+/* teams section styling 
 
 .projects .title::after{
 
@@ -873,9 +873,9 @@ transition: transform 0.3s, box-shadow 0.3s;
 
 }
 
-/* .projects .carousel .card:hover img{
+.projects .carousel .card:hover img{
 
-    border-color: #fff; */
+    border-color: #fff; 
 
  
 
@@ -921,7 +921,7 @@ transition: transform 0.3s, box-shadow 0.3s;
 
 }
 
- 
+  */
 
 /* contact section styling */
 
