@@ -337,8 +337,8 @@ section .title::after{
 .home{
 
     display: flex;
-
-    background: url("WhatsApp Image 2023-02-12 at 19.34.57.jpg") no-repeat center;
+/* 
+    background: url("WhatsApp Image 2023-02-12 at 19.34.57.jpg") no-repeat center; */
 
     height: 100vh;
 
@@ -458,14 +458,19 @@ section .title::after{
 
 .about .about-content .left img{
 
-    height: 500px;
+    height: 400px;
 
-    width: 500px;
+    width: 400px;
 
     object-fit: cover;
-
-    border-radius: 6px;
-
+    box-sizing: border-box;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.1);
+    margin: auto;
+    
+background-color: white;
+transition: transform 0.3s, box-shadow 0.3s;
+    border-radius: 10px;
+    
 }
 
 .about .about-content .right{
@@ -480,7 +485,7 @@ section .title::after{
 
     font-weight: 600;
 
-    margin-bottom: 10px;
+    margin-bottom: 1px;
 
 }
 
@@ -628,7 +633,7 @@ section .title::after{
 
 .skills .title::after{
 
-    content: "what i know";
+    content: "what we offer";
 
 }
 
@@ -1621,153 +1626,44 @@ footer span a:hover{
   /* Grids css */
 
  
-
   .grid-container {
-
- 
-
     display: grid;
-
- 
-
     grid-template-columns: repeat(4, minmax(250px, 1fr));
-
- 
-
     grid-gap: 50px;
-
- 
-
     max-width: 960px;
-
- 
-
     margin: 0 auto;
-
- 
-
-    padding: 20px;
-
- 
-
     border-color: black;
-
- 
-
-   
-
- 
-
   }
-
- 
-
- 
-
- 
-
+  
   .grid-item {
-
- 
-
     display: flex;
-
- 
-
     flex-direction: column;
-
- 
-
-    align-items: center;
-
- 
-
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
     text-align: center;
-
- 
-
     position: relative;
-
- 
-
     overflow: hidden;
-
- 
-
-    background-color: #f8f8f8;
-
- 
-
+    background-color: white;
     transition: transform 0.3s, box-shadow 0.3s;
-
- 
-
-    width: 100%;
-
- 
-
-       padding: 20px;
-
- 
-
+    width: 250px;
+    padding: 20px;
     box-sizing: border-box;
-
- 
-
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-
- 
-
+    margin: auto; /* Center both vertically and horizontally */
   }
-
- 
-
- 
-
- 
-
+  
   .grid-item:hover {
-
- 
-
     transform: scale(1.05);
-
- 
-
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-
- 
-
-    background-color: rgb(236, 214, 214);
-
- 
-
+    background-color: white;
   }
-
- 
-
- 
-
- 
-
+  
   .image {
-
- 
-
-    width: 100%;
-
- 
-
-    height: 100%;
-
- 
-
+    width: 150px;
+    height: 150px;
     object-fit: cover;
-
- 
-
   }
-
+  
  
 
  
