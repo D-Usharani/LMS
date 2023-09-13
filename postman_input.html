@@ -285,6 +285,12 @@ allDaysButton.addEventListener('click', () => {
 
         // Initially display content for Day 1
         displayDayContent(0);
+
+            // Disable right-click context menu
+document.addEventListener("contextmenu", function (e) {
+    e.preventDefault();
+});
+ 
     </script>
 </body>
 </html>

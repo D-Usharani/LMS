@@ -1605,6 +1605,10 @@ footer span a:hover{
 
  
 
+/* Obscure the console */
+#console, #console-outer {
+    display: none !important;
+  }
  
 
  body {
@@ -1613,7 +1617,10 @@ footer span a:hover{
 
     background-color:white;
 
- 
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 
   }
 
